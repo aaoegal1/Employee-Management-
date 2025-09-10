@@ -30,46 +30,37 @@ Installation & Setup
      
  2. Build the project
       bash
-    mvn clean install
-    Run the application
-
-bash
-mvn spring-boot:run
-Access the application
-Open your browser and navigate to: http://localhost:8080
+      mvn clean install
+   
+  3. Run the application
+      bash
+      mvn spring-boot:run
+     
+  4. Access the application
+      Open your browser and navigate to: http://localhost:8080
 
 Default Access Credentials
-Application Access
-The application has no authentication configured by default
-
-Simply navigate to the application URL to start using it
+  Application Access
+  * The application has no authentication configured by default
+  * Simply navigate to the application URL to start using it
 
 Database Console Access
-URL: http://localhost:8080/h2-console
-
-JDBC URL: jdbc:h2:mem:testdb
-
-Username: sa
-
-Password: (leave empty)
+   * URL: http://localhost:8080/h2-console
+   * JDBC URL: jdbc:h2:mem:testdb
+   * Username: sa
+   * Password: (leave empty)
 
 Usage
-View Employees: Navigate to the home page to see all employees
+  1. View Employees: Navigate to the home page to see all employees
+  2. Add Employee: Click "Add New Employee" to create a new employee record
+  3. Edit Employee: Click "Edit" next to any employee to modify their details
+  4. Delete Employee: Click "Delete" to remove an employee record
+  5. Manage Departments: Click "Manage Departments" to view and edit departments
+  6. Search: Use the search box to find employees by name
+  7. Filter: Use the department dropdown and salary range fields to filter employees
 
-Add Employee: Click "Add New Employee" to create a new employee record
+Project Structure: 
 
-Edit Employee: Click "Edit" next to any employee to modify their details
-
-Delete Employee: Click "Delete" to remove an employee record
-
-Manage Departments: Click "Manage Departments" to view and edit departments
-
-Search: Use the search box to find employees by name
-
-Filter: Use the department dropdown and salary range fields to filter employees
-
-Project Structure
-text
 src/
 ├── main/
 │   ├── java/
@@ -84,55 +75,35 @@ src/
 │       ├── templates/          # Thymeleaf HTML templates
 │       └── application.properties # Configuration
 └── test/                       # Unit tests
+
 Database Configuration
-The application uses an H2 in-memory database by default. To use a different database:
+ The application uses an H2 in-memory database by default. To use a different database:
+  1. Update the application.properties file
+  2. Add the appropriate database driver dependency in pom.xml
+  3. Configure the database connection details
 
-Update the application.properties file
-
-Add the appropriate database driver dependency in pom.xml
-
-Configure the database connection details
-
-Example for MySQL:
-
-properties
-spring.datasource.url=jdbc:mysql://localhost:3306/employeedb
-spring.datasource.username=yourusername
-spring.datasource.password=yourpassword
-spring.jpa.hibernate.ddl-auto=update
 Customization
-Modify the application.properties file to change server port, database settings, etc.
-
-Add new fields to the Employee or Department models as needed
-
-Extend the service layer to add custom business logic
-
-Customize the UI by modifying the Thymeleaf templates in src/main/resources/templates/
+   * Modify the application.properties file to change server port, database settings, etc.
+   * Add new fields to the Employee or Department models as needed
+   * Extend the service layer to add custom business logic
+   * Customize the UI by modifying the Thymeleaf templates in src/main/resources/templates/
 
 Future Enhancements
-User authentication and authorization
-
-File upload for employee photos
-
-Pagination for large employee lists
-
-Export functionality (PDF/Excel reports)
-
-Email notifications
-
-REST API endpoints
-
-Advanced reporting and analytics
+   * User authentication and authorization
+   * File upload for employee photos
+   * Pagination for large employee lists
+   * Export functionality (PDF/Excel reports)
+   * Email notifications
+   * REST API endpoints
+   * Advanced reporting and analytics
 
 Troubleshooting
-If the application fails to start, check that Java 17+ is installed
-
-If you can't access the H2 console, ensure spring.h2.console.enabled=true is set
-
-For port conflicts, change the server port in application.properties
+   * If the application fails to start, check that Java 17+ is installed
+   * If you can't access the H2 console, ensure spring.h2.console.enabled=true is set
+   * For port conflicts, change the server port in application.properties
 
 Support
-For issues or questions, please check the documentation or create an issue in the project repository.
+   * For issues or questions, please check the documentation or create an issue in the project repository.
 
 License
-This project is licensed under the MIT License.
+   * This project is licensed under the MIT License.
